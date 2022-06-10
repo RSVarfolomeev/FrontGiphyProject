@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiphyCurrencyPage</title>
+    <link th:href="@{/style.css}" rel="stylesheet"/>
+</head>
+<body>
+<img th:src="${giphyUrl}"/>
+
+<form class="add_form" th:action="@{/front/update}" method="post">
+    <label>Currency</label>
+    <input type="text" name="currency" minlength="3" maxlength="3" required>
+    <input class="outer_button all_button" type="submit" value="Update">
+</form>
+<span class="text" th:text="${message}"></span>
+</body>
+</html>
