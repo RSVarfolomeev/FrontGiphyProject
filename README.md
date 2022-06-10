@@ -11,6 +11,8 @@ java -jar Front-1.0-SNAPSHOT.jar
 ```  
 http://localhost:8090/front
 ```
+Для полноценной работы также необходимо запустить backend-часть приложения
+(https://github.com/RSVarfolomeev/GiphyProject).
 Значение валюты, которая сравнивается с USD, должно состоять из 3-х символов: EUR, CNY, RUB и т.д.
 
 Docker:
