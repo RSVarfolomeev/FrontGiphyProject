@@ -20,7 +20,7 @@ public class MainController {
     }
 
 
-    //    http://localhost:8090/front
+    //    http://localhost:8082/front
     @GetMapping
     public String index(Model model) {
         model.addAttribute("giphyUrl", answer[0]);

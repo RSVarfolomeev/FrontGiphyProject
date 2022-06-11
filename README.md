@@ -9,7 +9,7 @@ java -jar Front-1.0-SNAPSHOT.jar
 ```
 3. Открыть браузер и перейти по адресу:
 ```  
-http://localhost:8090/front
+http://localhost:8082/front
 ```
 Для полноценной работы также необходимо запустить backend-часть приложения
 (https://github.com/RSVarfolomeev/GiphyProject).
@@ -24,8 +24,13 @@ docker build -t giphy_project_front .
 ```
 Запуск контейнера:
 ```
-docker run -d -p 8090:8090 giphy_project_front
+docker run -d -p 8082:8082 --name=giphy_project_front giphy_project_front
 ```
+Для взаимодействия двух приложений между собой в Docker необходимо в файле application.properties использовать
+"Url for Docker" (исходный url закомментировать), пересобрать Front-приложение в Gradle, создать отдельную сеть
+в Docker, добавить в нее оба контейнера с приложениями.
+Создать сеть и добавить контейнеры можно через IntelliJ IDEA.
+https://habr.com/ru/post/554190/ - источник информации.
 ---
 #### Используемый стек технологий:
 
